@@ -12,7 +12,7 @@ except Exception as e:
     print("Requires a path to .rep file")
     exit()
 
-Data = open(replay_path).read(30000000)
+Data = open(replay_path).read(3000000)
 
 if len(re.findall('StartGame', Data)) == 0:
     print("could not detect the moment of the game starting... exit")
