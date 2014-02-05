@@ -41,8 +41,8 @@ global_s = Data.split('GlobalSettings:')[-1]
 
 server_name = re.findall('ServerName: (.*)', global_s)[0].replace("'", "\\'")
 maphash = re.findall('Map: (.*)', global_s)[0]
-mods = re.findall('Mods: (.*)', global_s)[0]
-version = re.findall('\tMods: (.*)', Data.split('Handshake:')[1].split('Response')[0])[0].split('@')[1]
+mods = re.findall('\tMod: (.*)', Data.split('Handshake:')[1].split('Map')[0])[0]
+version = re.findall('\tVersion: (.*)', Data.split('Handshake:')[1].split('Map')[0])[0]
 
 title = os.path.basename(replay_path)
 
